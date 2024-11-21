@@ -1,139 +1,157 @@
-body {
-    background-color: black;
-  }
-  
-  .header-games {
-    background-image: url('../Images/bgfortabs.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    height: 200px; 
+/* Base styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; /* Black background */
+    color: #71b139; /* Green text */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Timer styling */
+.timer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px; /* Slightly smaller font size */
+    font-weight: bold;
+    color: #71b139;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    padding: 0.5rem 0; /* Reduced padding */
+    background-color: #000000; /* Black background */
+    margin: 0;
+}
+
+.header h1 {
+    color: #71b139; /* Green text */
+    font-size: 2rem; /* Reduced font size */
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Main container for Bingo table */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Bingo table styling */
+#tblBingo {
+    border-collapse: collapse;
+    height: 20rem; /* Reduced height */
+    width: 20rem; /* Reduced width */
+    text-align: center;
+    font-size: 18pt; /* Reduced font size */
+    cursor: pointer;
+    color: #222; /* Grey text inside bingo table */
+}
+
+#tblBingo td {
+    padding: 0.2rem; /* Reduced padding */
+}
+
+/* Cell styling */
+.cell-format {
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;  
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.4);
-    background-blend-mode: multiply;
-  }
-  
-  .header-games {
-    background-image: url('./Images/Videos.jpg');
-  }
-  
-  
-  .header-games h1 {
-    font-size: 2.2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  }
-  
-  .header-games p {
-    margin-top: 10px; 
-    font-size: 1em; 
-    text-align: center;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  .gamesbox{
-    display: flex;
-    /* margin: auto; */
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 2vw;
-  }
-  
-  .gamesboxsmall {
-    padding: 2vw;
-    box-sizing: border-box;
-    width: 26vw;
-    height: auto;
-    border-radius:5px;
-    background-color: rgb(31, 30, 30);
-    margin: 1vw;
-    text-decoration: none;
-    transition: 0.3s ease-out;
-  }
-  
-  .gamesboxsmall img{
-    height: 15rem;
-    width: 100%;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(9, 11, 10, 0.7);
-  }
-  .gamesboxsmall:hover{
-    transform: translatey(-10px);
-  }
-  
-  .gamesboxsmall h2{
-    color: white;
-    text-align: center;
-    flex-wrap: wrap;
+    border-radius: 10%; /* Slightly rounded corners */
+    border: 0.5px solid #cccece;
+    background-color: #71b139; /* Green background for cells */
+    color: #fff; /* White text inside cells */
+}
+
+.cell-format:hover {
+    background-color: #86d145; /* Hover green */
+}
+
+/* Bingo letters at the bottom */
+.letter-div {
+    height: 15vh; /* Reduced height */
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    font-weight: 400;
-    font-size: 1.2rem;
-    margin: 0;
-    text-decoration: none;
-    min-height: 2.8rem; 
-    height: auto;
-  }
-  
-  .gamesboxsmall p{
-    color: white;
+    align-items: center;
+    color: #222; /* Grey color for the letters */
+    margin-top: 0.5rem; /* Reduced margin */
+}
+
+.letters-bingo {
+    padding: 0 1rem; /* Reduced spacing */
+    font-size: 30pt; /* Reduced font size */
+    display: none;
+    color: #86d145; /* Hover green color for bingo letters */
+    border: #cccece;
+}
+
+/* Strikethrough style */
+.strickout {
+    text-decoration: line-through;
+    color: #414141; /* Slightly faded grey for struck-out items */
+    font-size: 16pt; /* Reduced font size */
+    pointer-events: none;
+}
+
+.show-bingo {
+    display: inline;
+}
+
+/* Styling for the question display */
+.question-container {
     text-align: center;
-    font-weight: 400;
-    font-size: 0.9rem;
-    /* padding-top: 1rem; */
-    text-decoration: none;
-  }
-  
-  .gamesboxsmall a {
-    text-decoration: none;
-    color: rgb(141, 141, 141);
-  }
-  
-  .gamesboxsmall i {
-    font-size: 1.2rem;
-  }
-  
-  @media only screen and (max-width: 1064px) {
-    .gamesboxsmall {
-      width: 32vw;
-      margin: 2vw;
-    }
-    .gamesbox{
-      justify-content: center;
-      padding: 4vw;
-    }
-  }
-  
-  @media only screen and (max-width: 844px) {
-    .gamesboxsmall {
-      width: 38vw;
-      margin: 2vw;
-    }
-    .gamesbox{
-      justify-content: center;
-      padding: 4vw;
-    }
-  }
-  
-  @media only screen and (max-width: 700px) {
-    .gamesboxsmall {
-      width: 50vw;
-      margin: 5vw;
-    }
-  }
-  
-  @media only screen and (max-width: 570px) {
-    .gamesboxsmall {
-      width: 80vw;
-      margin: 5vw;
-    }
-  }
-  
+    margin: 0.5rem 0; /* Reduced margin */
+    color: #71b139;
+    font-size: 20px; /* Reduced font size */
+}
+
+/* Answer buttons styling */
+.answer-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #71b139;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem; /* Reduced padding */
+    font-size: 18px; /* Reduced font size */
+    cursor: pointer;
+    margin: 0.3rem; /* Reduced margin */
+    transition: background-color 0.3s ease;
+}
+
+.answer-button:hover {
+    background-color: #86d145; /* Hover effect */
+}
+
+/* Action buttons styling */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem; /* Reduced margin */
+}
+
+.action-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #71b139;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem; /* Reduced padding */
+    font-size: 18px; /* Reduced font size */
+    cursor: pointer;
+    margin: 0.5rem; /* Reduced margin */
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #86d145;
+}
