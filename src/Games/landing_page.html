@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Bingo - Landing Page</title>
+
+    <!-- Link to Google Fonts for Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="landing_page.css">
+</head>
+<body>
+    <!-- Landing Page Content -->
+    <div class="landing-container">
+        <h1 class="header">FINANCE BINGO</h1>
+        <p class="landing-description">Test your financial knowledge and have fun while playing Bingo!</p>
+        <div class="landing-buttons">
+            <button class="landing-button" onclick="startGame()">Start Game</button>
+            <button class="landing-button" onclick="goBack()">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function startGame() {
+            // Redirect to the game page
+            location.href = "game.html";
+        }
+
+        function goBack() {
+            // Redirect to a home or previous page
+            location.href = "finivesta.html";
+        }
+    </script>
+</body>
+</html>

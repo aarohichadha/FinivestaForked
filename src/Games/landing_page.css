@@ -1,0 +1,57 @@
+/* Landing Page Container */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-screen height */
+    text-align: center;
+    color: #71b139; /* Green color */
+    background-color: #000000; /* Black background */
+    gap: 1rem; /* Reduced spacing between elements */
+}
+
+/* Landing Page Description */
+.landing-description {
+    font-size: 1.5rem;
+    margin: 0; /* Remove default margin */
+    font-weight: 400;
+    color: #71b139; /* Green text */
+}
+
+/* Landing Page Buttons */
+.landing-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduce space between buttons */
+}
+
+.landing-button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #71b139; /* Green background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.landing-button:hover {
+    background-color: #86d145; /* Lighter green on hover */
+}
+
+.header {
+    text-align: center;
+    padding: 0.5rem 0; /* Reduced padding */
+    background-color: #000000; /* Black background */
+    margin: 0;
+}
+
+.header h1 {
+    color: #71b139; /* Green text */
+    font-size: 2rem; /* Reduced font size */
+    font-weight: 700;
+    margin: 0;
+}
